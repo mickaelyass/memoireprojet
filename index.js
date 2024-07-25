@@ -13,11 +13,13 @@ const path =require( 'path');
 
 const app = express();
 const uploadRouter = require('./routes/userProfileRoute');
+const fileroutes=require('./routes/documentRoute');
 
-app.use(express.json());
+app.use(express.json({limit:'50mb'}));
+app.use(express.urlencoded({limit:'50mb',extended:true}));
 
 app.use('/uploads', express.static(path.join(__dirname,'frontend/public/uploads'))); // Sert les fichiers dans le répertoire uploads
-
+//app.use('/doc', express.static(path.join(__dirname,'frontend/public/doc')));
 const server = http.createServer(app);
 initSocket(server); // Initialiser Socket.io avec le serveur
 
@@ -31,6 +33,7 @@ app.use('/api', uploadRouter);
 app.use('/api', utilisteurRoutes);
 app.use('/api', dossierRoutes);
 app.use('/api', congeRoutes);
+app.use('/api',fileroutes);
 
 
 // Démarrer le serveur

@@ -200,6 +200,7 @@ router.get('/dossiers', async (req, res) => {
   router.post('/dossiers', async (req, res) => {
     const { matricule, id_infoi, id_infop, id_infob, id_infoc } = req.body;
   
+  
     try {
       // Créer les informations identité, professionnelles, bancaires et complémentaires si nécessaires
       const infoIdent = await InfoIdent.create(req.body.infoIdent); // Assurez-vous d'adapter cela à votre structure de données

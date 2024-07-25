@@ -65,10 +65,10 @@ const InfoPro = sequelize.define('InfoPro', {
     type: DataTypes.STRING(50)
   },
   poste_anterieurs: {
-    type: DataTypes.STRING(100)
+    type: DataTypes.STRING(400)
   },
   autres_diplome: {
-    type: DataTypes.STRING(100)
+    type: DataTypes.STRING(400)
   }
 }, {
   tableName: 'info_pro',
