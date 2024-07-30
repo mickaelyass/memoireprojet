@@ -7,7 +7,7 @@ const InfoIdent = require('../models/infoIdent');
 const InfoPro = require('../models/infoPro');
 const InfoBank = require('../models/infoBank');
 const InfoComplementaire = require('../models/infoComplementaire');
-const { Op } = require('sequelize');
+const { Op, where } = require('sequelize');
 const { getIo } = require('../utils/socket');
 const Notification = require('../models/notification');
 // Lire tous les dossiers
@@ -19,6 +19,20 @@ router.get('/notifications',async (req, res) => {
         limit: 9
       }
     );
+    res.json(notification);
+  } catch (err) {
+    console.error('Error fetching users', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+router.get('/notifications/:matricule',async (req, res) => {
+  const { matricule} = req.params;
+  try {
+    const notification = await Notification.findAll(  {where: { 
+      user_id:matricule }
+   } );
+
     res.json(notification);
   } catch (err) {
     console.error('Error fetching users', err);
@@ -218,8 +232,8 @@ router.get('/dossiers', async (req, res) => {
       });
      
       const notification = await Notification.create({
-        message: `Nouveau dossier créé pour l'employé ayant pour matricule : ${dossier.matricule}`,
-        user_id: dossier.matricule,
+        message: `Nouveau dossier créé pour l'employé ayant pour matricule : ${matricule}`,
+        user_id: matricule,
       });
   
       // Émettre une notification via Socket.io
@@ -232,7 +246,31 @@ router.get('/dossiers', async (req, res) => {
     }
   });
   
-  
+  // Route to mark a notification as read
+
+  const markNotificationAsRead = async (notificationId) => {
+    try {
+      const notification = await Notification.findByPk(notificationId);
+      if (!notification) {
+        throw new Error('Notification not found');
+      }
+      notification.is_read = true;
+      await notification.save();
+      return notification;
+    } catch (error) {
+      throw error;
+    }
+  };
+  // Route pour marquer une notification comme lue
+  router.patch('/notifications/:id/read', async (req, res) => {
+    try {
+      const notificationId = parseInt(req.params.id, 10);
+      const updatedNotification = await markNotificationAsRead(notificationId);
+      res.status(200).json(updatedNotification);
+    } catch (error) {
+      res.status(400).json({ error: error.message });
+    }
+  });
   
   // Mettre à jour un dossier
   router.put('/dossiers/:id_dossier', async (req, res) => {

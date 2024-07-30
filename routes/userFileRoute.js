@@ -4,6 +4,9 @@ const path = require('path');
 const router = express.Router();
 const UserFile = require('../models/userFile'); // Assurez-vous que le nom du modèle est correct
 const fs=require('fs');
+const { Op } = require('sequelize');
+const { getIo } = require('../utils/socket');
+const Notification = require('../models/notification');
 
 // Configure Multer
 const storage = multer.diskStorage({
@@ -40,34 +43,49 @@ const doc = multer({
 
 // Endpoint pour l'upload
 router.post('/doc', doc.single('file'), async (req, res) => {
-  const matricule = req.body.matricule; // Assurez-vous que le matricule est envoyé dans le corps de la requête
+  if (!req.file) {
+    return res.status(400).json({ error: 'No file uploaded' });
+  }
+
+  const matricule = req.body.matricule;
   const fileUrl = `/doc/${req.file.filename}`;
-  
+
   try {
-    // Insérer ou mettre à jour l'URL de l'image dans la base de données
-    const [doc,created]=await UserFile.upsert({ matricule: matricule, file_url: fileUrl });
-    res.json({
-      message:'File uploeded and url saved successfully',
-      filePath:fileUrl
+    // Insérer ou mettre à jour l'URL du fichier dans la base de données
+    await UserFile.upsert({ matricule: matricule, file_url: fileUrl });
+
+    const notification = await Notification.create({
+      message: `Nouveau fichier reçu: ${matricule}`,
+      user_id: matricule,
     });
+
+    // Émettre une notification via Socket.io
+    getIo().emit('receiveNotification', notification);
+
+    res.json({
+      message: 'File uploaded and URL saved successfully',
+      filePath: fileUrl
+    });
+
   } catch (error) {
-    console.error('Error saving image URL:', error);
+    console.error('Error saving file URL:', error);
     res.status(500).json({ error: 'Failed to save file URL' });
   }
 });
+
 
 router.get('/user/file/:matricule', async (req, res) => {
   const matricule = req.params.matricule;
 
   try {
-    const userFile = await UserFile.findOne({ where: { matricule: matricule } });
+    const userFile = await UserFile.findAll({ where: { matricule: matricule } });
     if (userFile) {
       res.json(userFile);
     } else {
-      res.status(404).json({ message: 'Profile file not found' });
+      res.status(404).json({ message: ' file not found' });
     }
   } catch (error) {
-    console.error('Error fetching image URL:', error);
+    console.error('Error fetching file URL:', error);
     res.status(500).json({ error: 'Failed to fetch file URL' });
   }
 });
