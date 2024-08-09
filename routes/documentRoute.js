@@ -4,7 +4,9 @@ const path = require('path');
 const router = express.Router();
 const Document = require('../models//document'); // Assurez-vous que le nom du modèle est correct
 const fs=require('fs');
-
+const { Op } = require('sequelize');
+const { getIo } = require('../utils/socket');
+const Notification = require('../models/notification');
 // Configure Multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -47,6 +49,14 @@ router.post('/doc', doc.single('file'), async (req, res) => {
   try {
     // Insérer ou mettre à jour l'URL de l'image dans la base de données
     const document=await Document.create({ matricule: matricule, file_url: fileUrl,file_name:fileName });
+    
+    const notification = await Notification.create({
+      message: `Nouveau fichier reçu: ${matricule}`,
+      user_id: matricule,
+    });
+
+    // Émettre une notification via Socket.io
+    getIo().emit('receiveNotification', notification);
     res.json({
      document:document,
       message:'File uploeded and url saved successfully',

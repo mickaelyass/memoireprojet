@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes,Sequelize } = require('sequelize');
 const sequelize = require('../db');
 const Utilisateur = require('./utilisateur');
 
@@ -21,7 +21,8 @@ const InfoIdent = sequelize.define('InfoIdent', {
     type: DataTypes.STRING(50)
   },
   sexe: {
-    type: DataTypes.STRING(10)
+    type: Sequelize.ENUM('F', 'M'),
+    allowNull: false,
   },
   dat_nat: {
     type: DataTypes.DATE
@@ -33,7 +34,8 @@ const InfoIdent = sequelize.define('InfoIdent', {
     type: DataTypes.STRING(50)
   },
   dat_mariage: {
-    type: DataTypes.DATE
+    type: DataTypes.DATE,
+    allowNull:true
   },
   nbre_enfants: {
     type: DataTypes.INTEGER

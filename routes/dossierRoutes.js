@@ -29,7 +29,7 @@ router.get('/notifications',async (req, res) => {
 router.get('/notifications/:matricule',async (req, res) => {
   const { matricule} = req.params;
   try {
-    const notification = await Notification.findAll(  {where: { 
+    const notification = await Notification.findAll( { order: [['create_dat', 'DESC']],where: { 
       user_id:matricule }
    } );
 
@@ -275,50 +275,67 @@ router.get('/dossiers', async (req, res) => {
   // Mettre à jour un dossier
   router.put('/dossiers/:id_dossier', async (req, res) => {
     const { id_dossier } = req.params;
-  
+
     try {
-      // Vérifier si le dossier existe
-      const dossier = await Dossier.findByPk(id_dossier);
-      if (!dossier) {
-        return res.status(404).json({ error: 'Dossier not found' });
-      }
-  
-      // Mettre à jour les informations identité, professionnelles, bancaires, et complémentaires si nécessaires
-      if (req.body.infoIdent) {
-        await InfoIdent.update(req.body.infoIdent, { where: { id_infoi: dossier.id_infoi } });
-      }
-      if (req.body.infoPro) {
-        await InfoPro.update(req.body.infoPro, { where: { id_infop: dossier.id_infop } });
-      }
-      if (req.body.infoBank) {
-        await InfoBank.update(req.body.infoBank, { where: { id_infob: dossier.id_infob } });
-      }
-      if (req.body.infoComplementaire) {
-        await InfoComplementaire.update(req.body.infoComplementaire, { where: { id_infoc: dossier.id_infoc } });
-      }
-  
-      // Mettre à jour le dossier lui-même
-      const updatedDossier = await Dossier.update(req.body, {
-        where: { id_dossier },
-        returning: true // pour obtenir le dossier mis à jour
-      });
+        // Vérifier si le dossier existe
+        const dossier = await Dossier.findByPk(id_dossier);
+        if (!dossier) {
+            return res.status(404).json({ error: 'Dossier not found' });
+        }
 
-     // Enregistrer une notification dans la base de données
-    const notification = await Notification.create({
-      message: `Dossier ${id_dossier} mis à jour : `,
-      user_id: dossier.matricule,
-    });
+        // Mettre à jour les informations identité, professionnelles, bancaires, et complémentaires si nécessaires
+        if (req.body.infoIdent) {
+            await InfoIdent.update(req.body.infoIdent, { where: { id_infoi: dossier.id_infoi } });
+        }
+        if (req.body.infoPro) {
+            await InfoPro.update(req.body.infoPro, { where: { id_infop: dossier.id_infop } });
+        }
+        if (req.body.infoBank) {
+            await InfoBank.update(req.body.infoBank, { where: { id_infob: dossier.id_infob } });
+        }
+        if (req.body.infoComplementaire) {
+            await InfoComplementaire.update(req.body.infoComplementaire, { where: { id_infoc: dossier.id_infoc } });
+        }
 
-    // Émettre une notification via Socket.io
-    getIo().emit('receiveNotification', notification);
+        // Gestion des ajouts pour les champs spécifiques
+        const infoPro = await InfoPro.findByPk(dossier.id_infop);
+        if (req.body.infoPro && req.body.infoPro.poste_anterieurs) {
+            infoPro.poste_anterieurs = (infoPro.poste_anterieurs || '') + ' '+ req.body.infoPro.poste_anterieurs;
+            await infoPro.save();
+        }
+        if (req.body.infoPro && req.body.infoPro.diplome_anterieur) {
+            infoPro.diplome_anterieur = (infoPro.diplome_anterieur || '') + ' '+ req.body.infoPro.diplome_anterieur;
+            await infoPro.save();
+        }
+        if (req.body.infoComplementaire && req.body.infoComplementaire.distinction) {
+            const infoComplementaire = await InfoComplementaire.findByPk(dossier.id_infoc);
+            infoComplementaire.distinction = (infoComplementaire.distinction || '') +' '+ req.body.infoComplementaire.distinction;
+            await infoComplementaire.save();
+        }
 
-      console.log(updatedDossier[1][0]);
-      res.json(updatedDossier[1][0]); // renvoie le premier dossier mis à jour
+        // Mettre à jour le dossier lui-même
+        const updatedDossier = await Dossier.update(req.body, {
+            where: { id_dossier },
+            returning: true // pour obtenir le dossier mis à jour
+        });
+
+        // Enregistrer une notification dans la base de données
+        const notification = await Notification.create({
+            message: `Dossier ${id_dossier} mis à jour.`,
+            user_id: dossier.matricule,
+        });
+
+        // Émettre une notification via Socket.io
+        getIo().emit('receiveNotification', notification);
+
+        console.log(updatedDossier[1][0]);
+        res.json(updatedDossier[1][0]); // renvoie le premier dossier mis à jour
     } catch (err) {
-      console.error('Error updating dossier', err);
-      res.status(500).json({ error: 'Internal server error' });
+        console.error('Error updating dossier', err);
+        res.status(500).json({ error: 'Internal server error' });
     }
-  });
+});
+
   
   // Supprimer un dossier
   router.delete('/dossiers/:id', async (req, res) => {

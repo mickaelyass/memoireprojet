@@ -1,8 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="94592280-66aa-43e7-927a-9c65b4efe845" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend" beforeDir="false" afterPath="$PROJECT_DIR$/frontend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721729583505.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721731067770.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721731244518.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721731622643.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721732073384.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721732259388.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721732325325.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721732339210.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721732461934.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721732472883.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721732915000.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721742750283.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721742870943.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721745423085.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721745506503.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721745527522.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721745620011.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721864957500.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721865285258.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721865299303.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721865379053.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721865472507.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721865497582.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721870266828.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721870307352.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721870327311.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721870339321.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721870453149.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721870990544.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721897321900.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721897353125.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721897377345.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721897385295.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721897885953.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721898271850.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721899052897.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721899072839.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721899222710.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721899246979.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/doc/1721899295654.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721390076357.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721395156241.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721395200724.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721395330916.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721396064109.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721396559939.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721398135079.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721398470062.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721399967521.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721400413048.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721400459645.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721401405856.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721401446539.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721401463106.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721401507746.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721401606300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721490469689.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721490561612.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721490606979.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721491446161.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721491480846.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721491537394.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721491938539.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721494417506.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721495100092.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721495194285.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721495319338.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721575177514.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721603247772.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721603623847.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721603633096.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721633151788.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721657923919.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721665142136.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721665224672.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721665281936.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721665306190.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721665321530.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721665358036.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721730320375.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721730346519.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721732209909.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721749172971.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721899153117.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721899208383.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721899234396.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721899534478.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721899598084.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/uploads/1721900936170.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CongeComponents/CongeForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CongeComponents/CongeForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CongeComponents/CongeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CongeComponents/CongeList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CongeComponents/CreateConge.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CongeComponents/CreateConge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CongeComponents/EditConge.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CongeComponents/EditConge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CongeComponents/GererDemande.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CongeComponents/GererDemande.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DashbordAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DashbordAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DashbordUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DashbordUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Documents.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Documents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DossierComponents/CreateDossier.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DossierComponents/CreateDossier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DossierComponents/DossierForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DossierComponents/DossierForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DossierComponents/DossierFormUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DossierComponents/DossierFormUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DossierComponents/DossierList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DossierComponents/DossierList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DossierComponents/EditDossier.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DossierComponents/EditDossier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DossierComponents/EditDossierUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DossierComponents/EditDossierUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DossierComponents/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DossierComponents/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FileUpload.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/FileUpload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/HeaderAdmin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ImageProfileEmploye.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ImageProfileEmploye.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ImageUploadForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ImageUploadForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Monprofile.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Monprofile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Notif.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Notif.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UtilisateurComponents/EditUtilisateur.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UtilisateurComponents/EditUtilisateur.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UtilisateurComponents/LoginUtilisateur.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UtilisateurComponents/LoginUtilisateur.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UtilisateurComponents/RegisterUtilisateur.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UtilisateurComponents/RegisterUtilisateur.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UtilisateurComponents/UtilisateurForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UtilisateurComponents/UtilisateurForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UtilisateurComponents/UtilisateurList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UtilisateurComponents/UtilisateurList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/congeRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/congeRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/documentRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/documentRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/dossierRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/dossierRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/userFileRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userFileRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,11 +139,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/frontend" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2jnyfDLM3Q34J7cQrnbRDbF6xx4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,7 +153,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -32,8 +161,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
-        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
       </set>
     </attachedChunks>
   </component>

@@ -26,7 +26,8 @@ const InfoPro = sequelize.define('InfoPro', {
     type: DataTypes.STRING(50)
   },
   dat_prise_fonction: {
-    type: DataTypes.DATE
+    type: DataTypes.DATE,
+    allowNull: true
   },
   responsabilite_partiuliere: {
     type: DataTypes.STRING(100)
@@ -38,13 +39,16 @@ const InfoPro = sequelize.define('InfoPro', {
     type: DataTypes.INTEGER
   },
   dat_first_prise_de_service: {
-    type: DataTypes.DATE
+    type: DataTypes.DATE,
+    allowNull:true
   },
   dat_de_depart_retraite: {
-    type: DataTypes.DATE
+    type: DataTypes.DATE,
+    allowNull:true
   },
   dat_de_prise_service_dans_departement: {
-    type: DataTypes.DATE
+    type: DataTypes.DATE,
+    allowNull: true
   },
   ref_acte_de_prise_service_poste_actuel: {
     type: DataTypes.STRING(100)

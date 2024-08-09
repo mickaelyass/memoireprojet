@@ -42,7 +42,7 @@ router.post('/conges', async (req, res) => {
     
  // Enregistrer une notification dans la base de données
  const notification = await Notification.create({
-  message: `Nouvelle demande de congé soumis par l'employe ayant pour matricule : ${leave.matricule}`,
+  message: `Nouvelle demande de congé soumis par l'employe : ${leave.matricule}`,
   user_id: leave.matricule,
 });
 
@@ -82,7 +82,7 @@ router.put('/conges/:id', async (req, res) => {
       const conge = await Conge.findByPk(id);
        // Enregistrer une notification dans la base de données
       const notification = await Notification.create({
-        message: `Demande de congé ${id} mise à jour :`,
+        message: `Demande de congé gerer :`,
         user_id: conge.matricule,
       });
 
